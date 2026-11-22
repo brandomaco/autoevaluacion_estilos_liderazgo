@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAIAAAC1eHXNAAAHAklEQVR4Xu2Yf1DTZRzHn+++274wNxbI1LIEU0bgyQy3IkDDEk9Zcw6yUJimocIpwToiz6tLfnVXimnqObBIxg9tjIhkyjQ0URFGDKHr6EQMafzUgGRrzG18u/WVObcvbCPq/KP37Y/n2fN8Ps/r+Ty/vxCFQgWPgQiPAYNZ/3M8KqJL40IkEjkcTlhY6EsvhTAYs6jUGSQSaWRkZGhouL29va2trbpacfv2bZd8YoKcnKdsNjs+Pi4mJtrLy6uvr6+pqamnp3dkZMRgMNDpdAbDOzAw0M/Pj0gkKpWN+fn5UmmZyWRyHsgxh6+vb05O9rp1/Js3bxYVFUulZV1dXbgN0Gi0yMjImBgBj8dTq9WZmdmnTp1yFoVCoU7yE4ne1el0AwMDCQnbJ69pXRoQsKig4CsURZVK5eLFLGcMJ4yHu7ubWCx+/fUYmaw8JSV1eHjY2Z6NKyTkxbw8sbc3QyjcdOHChcnN8TnodHpZmfSFFzjp6e/n5x+f3MUk8vCgFRYWrlgRERu7obpaMUlNHA4EQWpqzjOZzLi4+PPnv58yBCYYhouLiyIjI/l8/tWrdRN5w+E4ePCzrVu38HhrL12q/YcQmBAEqar6zt//udDQMLVajevTdj99+eXl27YlZGVlTxcEAECv1wuFm1F0rLS0BIZhXA7beFy7dlWr1a5cuWpaImEtLpcrlZ5KS0s/duyYvfNH4uHp6anRaFNSRNMOAQCQy+UKxbk9e3ZTKBR7/473sWlUcPDzly/XpqaKjh//wsatg/M2IHiJPysIBwWCAtevxUU08l9BqTg9BgCoVM2NjT/GxW10MC72Cl4e/nlVedhq2+lCgAlrDma/+vEeiGDbE9NbgtGLJ8aenoNLKZPJOBzO3LlzXYvH2dKviSRSTnHB+qRt1pZjRlPnD1eXbI4VSI6SqTOsi+CK79HABfpaiSk40B7lzJmzAIBly5a5xjE4cKdKUkogEJJzMtIOfEKwWnUNh81jPH9F2MbTxR5PP2XxC5fKoe4BdPZM/bkvTOtesWnv1q1bd+/eXbo02DUOAEDp50eNBgMAYO1bwn3SkhkeNMyFur5J3aACAMxkLoiTl855fjH2P2Q0EnO/MqfcEX3JPkPaFpsmb9y44ePj4zJHv7pb8bUMM+OsWC4+V/Wkzzws23AoH0tQvL3eLC9g8h5MI+KJb6H+37EiQ8Yufd5elPTwwtXT0zt79myXOQAAxQcPW8x8mH555+VPeM8EAHRequtr+RkrIiIIT7w/IJprDon+PvFQkcXEFM/TVx6xZHW6PxEEmQqHTqMdGxuzWEIECKAPcgbtnzYeH0jz6P/Qw2VFIMD2VzUH+wemDclJhPH12XWzIzHyteHfzWGfw1r0TCgHq2O6b5Dv2t32jdycgQnGFKGFD5YpEP5OS9bLy2toaMjleNBnevG3bMLMWq81JK3idf/aiWVDUndgidE/7sk2bP+l4gyWNa5fjS54BksT9xcgm/dA980zHdOzz863v1k6jkfszkS3v0+Ei5VVIsGbI+MXM0YAc8GqCADAH13qk2uF6vomS0uG9K1/4xjJSRnkj45ad93d3X3hwoVtbW028XDwbqDS6YIE88IrPXRUnJFjbRwiSgQA9Db/VLFpl27wYZyNgldR//ngnhbZmAZfVNq0Fx4eDsNwbe1l1zjWbFiPuCGfpr5XJSmxtoRgmMld2X62Rr5zt0mvty4yxUZBv/UhgmRC2y2bxgAAUVFr+vv7W1pabIocnLeL2EtJbsj1K3b3OQhiCd9oLZKi6PjKGZdRsBK+dh3qu2sPQSaTOzraCwslH3zwoWsc06uEhLdzc/cHBS2xf/P9d/cPKpWqUv1YU1OTlPRwDVuEs158fW03/2lRZmYGnU7PzMzC9YbDUVh4oqhIEhiIc2pPWVwud8eO7VlZ2b29fc5yqFTN0dGCxsaGkydLGAzvKbdtEYsV9OWXxxUKxZEjj+wl1sKJR3NzM1bDaDTeuYMz7V0Sm7309OnvWltbhcLNkxjicKhUqs7OzsrKyujo6PT09ywnyxQUF7exuvqsUqnk8wVarXYyD/aPcRqNPm+eD4VCzc09gKJofX19aGi4M2926zp+fv4yWTmKomJxHo1Gd2ju4LtDVBS3o6MDRdGKim+Dg9kO3VEoZoLc3AM6nU6j0SQnv+OMCYUy8XcHi8hkcmLiDpFINGsWo76+Xi4/c+XKldbWn0ZHRy11SCRSUNBiNpvN5UZFRETAMCyRSPbuzezv73dyNJ3dxxAEiYmJjo+PDwsLJRLNp2N3d4/RaCSRiDSaB4324CNsc/P18vLysjLZRO/pieQsh0Xu7m4sFovJ9Pf19fH09CSTSRqN5t69kZaW1rq6usHBQScDYCOXOf4lOb4H/Td6XDj+Ao/ljFwe09gYAAAAAElFTkSuQmCC">
+<title>Evaluación Estilos de Liderazgo</title>
+<style>
+/* VOICE: ejecutivo y sobrio, como un instrumento de assessment de consultora
+   IDEA: la rueda D·I·S·C del aula es el hilo: se explora, acompaña cada respuesta y se llena con el perfil
+   PICTURE: rueda grande sobre fondo oscuro en portada y resultados; cuadrantes de madurez en el tablero
+   COLOUR and TYPE: marfil cálido y grafito profundo; ocho tonos joya apagados, uno por estilo; Arial
+   LAYOUT: portada a pantalla completa; evaluación con panel de progreso fijo; resultados como tablero */
+:root{color-scheme:light dark;--bg:light-dark(#f6f4f0,#101217);--ink:light-dark(#16181d,#eceae5);--mut:light-dark(#6c6a66,#a19e97);--line:light-dark(#e4e0d8,#2a2c33);--card:light-dark(#ffffff,#181a20);--soft:light-dark(#efece6,#15171c);--sh:light-dark(0 1px 2px rgba(22,24,29,.04),0 1px 2px rgba(0,0,0,.3)) ;--sh2:light-dark(0 12px 32px -12px rgba(22,24,29,.14),0 12px 32px -12px rgba(0,0,0,.6));
+--s-dom:light-dark(#8e2b3a,#d98a95);--s-pio:light-dark(#a8582f,#e3a27c);--s-ene:light-dark(#a07a28,#e2c27a);--s-cap:light-dark(#3b7556,#8fc8a6);--s-afi:light-dark(#2b7378,#82c4c7);--s-par:light-dark(#355d8f,#93b3dc);--s-sis:light-dark(#4a4e8a,#a8abe2);--s-res:light-dark(#6b3a76,#c79bd1);--cD:light-dark(#2e9a7e,#5cc8a8);--cI:light-dark(#6b2fa0,#b58ae0);--cS:light-dark(#0b66b5,#6fb0ec);--cC:light-dark(#b80f1e,#f0707a)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+.dark{--s-dom:#d98a95;--s-pio:#e3a27c;--s-ene:#e2c27a;--s-cap:#8fc8a6;--s-afi:#82c4c7;--s-par:#93b3dc;--s-sis:#a8abe2;--s-res:#c79bd1;--bg:#0c0e12;--ink:#f1efea;--mut:#9b988f;--line:rgba(255,255,255,.09);--card:rgba(255,255,255,.035);--soft:rgba(255,255,255,.03);--sh:none;--sh2:none;--cD:#5cc8a8;--cI:#b58ae0;--cS:#6fb0ec;--cC:#f0707a;background:radial-gradient(900px 520px at 78% 38%,#1b2030 0%,rgba(12,14,18,0) 70%),radial-gradient(700px 400px at 10% 110%,#191621 0%,rgba(12,14,18,0) 70%),#0c0e12;color:var(--ink);color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:0 max(5vw,18px)}
+h1{font-size:clamp(34px,5vw,54px);line-height:1.03;margin:0 0 18px;letter-spacing:-.03em;font-weight:700;text-wrap:balance}
+h2{font-size:clamp(24px,3vw,32px);line-height:1.12;margin:0 0 12px;letter-spacing:-.01em;text-wrap:balance}
+h3{font-size:18px;margin:0 0 6px}
+p{margin:0 0 14px;max-width:66ch}.mut{color:var(--mut)}.small{font-size:14px}.ri{font-style:italic}
+.kicker{font-size:14px;color:var(--mut);margin-bottom:20px;display:flex;align-items:center;gap:12px}.kicker::before{content:'';width:28px;height:1px;background:currentColor;opacity:.7}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--cS);outline-offset:2px}
+.btn{min-height:50px;padding:12px 28px;letter-spacing:.01em;border:0;background:var(--ink);color:var(--bg);border-radius:999px;cursor:pointer;font-weight:700;font-size:16px;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}.btn:disabled{opacity:.3;cursor:default;transform:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.link{background:none;border:0;color:var(--mut);text-decoration:underline;cursor:pointer;min-height:44px;padding:0 8px}
+/* portada */
+.hero{padding:clamp(36px,6vw,80px) 0 clamp(36px,5vw,64px)}
+.heroGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.lead{font-size:18px;color:var(--mut)}
+.field{display:grid;gap:6px;margin:0 0 14px;max-width:440px}
+.field span{font-weight:700;font-size:15px}
+.field input{min-height:52px;padding:12px 18px;border:1px solid var(--line);border-radius:14px;background:var(--card);font-size:16px;transition:border-color .2s}.field input:focus{border-color:var(--mut);outline:none}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:clamp(32px,5vw,56px) 0}
+.how div{border-top:1px solid var(--line);padding-top:14px}.how b{display:block;font-size:20px;margin-bottom:4px}
+.wheel{width:100%;max-width:560px;margin:0 auto;display:block;overflow:visible}
+.wheel text{font:700 17px Arial,sans-serif;fill:var(--ink)}
+.wheel .lab{cursor:pointer}.wheel .lab.on{text-decoration:underline;text-underline-offset:5px}
+.qD{fill:color-mix(in srgb,var(--cD) 16%,var(--bg))}.qI{fill:color-mix(in srgb,var(--cI) 16%,var(--bg))}.qS{fill:color-mix(in srgb,var(--cS) 16%,var(--bg))}.qC{fill:color-mix(in srgb,var(--cC) 16%,var(--bg))}
+.ring{fill:none;stroke:var(--line)}
+.poly{fill:var(--ink);fill-opacity:.1;stroke:var(--ink);stroke-opacity:.85;stroke-width:2;stroke-linejoin:round;transform-origin:230px 230px;animation:grow 1s cubic-bezier(.2,.8,.2,1)}
+@keyframes grow{from{transform:scale(0);opacity:0}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:var(--sh)}.dark .card{backdrop-filter:blur(6px)}
+.hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px}.hd h3{font-size:22px;margin:0 0 10px}.hd>span{font-size:14px;font-weight:700;color:var(--mut);white-space:nowrap}
+#inf .card{margin-top:10px;min-height:136px}
+.grid8{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0 clamp(40px,6vw,72px)}
+.grid8 .card{cursor:pointer;text-align:start;transition:border-color .25s,transform .25s,box-shadow .25s;position:relative;overflow:hidden}.grid8 .card::after{content:'';position:absolute;inset:auto -30% -60% auto;width:70%;aspect-ratio:1;border-radius:50%;background:var(--sc);opacity:.07;transition:opacity .25s}.grid8 .card:hover::after,.grid8 .card.on::after{opacity:.16}
+.grid8 .card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}.grid8 .card.on{border-color:var(--sc);box-shadow:var(--sh2)}
+/* evaluación */
+.shell{display:grid;grid-template-columns:320px minmax(0,1fr);min-height:100vh}
+aside{position:sticky;top:0;height:100vh;border-right:1px solid var(--line);padding:28px 26px;display:flex;flex-direction:column;gap:22px;overflow:auto}
+aside .brand{font-weight:700;line-height:1.35}aside .brand span{display:block;font-weight:400;color:var(--mut);font-size:14px}
+aside .mw{width:180px;margin:0 auto}
+.who{font-size:14px;color:var(--mut)}.who b{display:block;color:var(--ink);font-size:16px}
+.steps{display:grid;gap:14px}
+.st{display:grid;gap:6px;font-size:14px;color:var(--mut);background:none;border:0;text-align:start;padding:10px 12px;margin:0 -12px;border-radius:12px;cursor:pointer;transition:background .2s,color .2s}.st:hover:not(:disabled){background:rgba(255,255,255,.06);color:var(--ink)}.st.on{color:var(--ink);background:rgba(255,255,255,.08)}.st:disabled{cursor:default;opacity:.55}.st small{font-size:12px;color:var(--mut)}.st b{font-size:15px}
+.st .tr{height:4px;border-radius:4px;background:var(--line);overflow:hidden}.st .tr i{display:block;height:100%;background:var(--ink);transition:width .4s}
+aside .foot{margin-top:auto;font-size:13px;color:var(--mut)}
+.stage{display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,5vw,72px) clamp(18px,6vw,96px);min-height:100vh}
+.scr{max-width:860px;width:100%;margin:0 auto;animation:in .38s cubic-bezier(.2,.8,.2,1)}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+.cnt{font-size:14px;color:var(--mut);margin-bottom:22px}.cnt b{color:var(--ink);font-size:15px}
+.stmt{font-size:clamp(26px,3.6vw,40px);line-height:1.18;font-weight:700;letter-spacing:-.01em;margin:0 0 30px;text-wrap:balance}
+.stmt.sm{font-size:clamp(21px,2.6vw,28px);line-height:1.3}
+.ask{font-weight:700;margin-bottom:12px}
+.lik{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.lik button{min-height:100px;border:1px solid var(--line);background:var(--card);box-shadow:var(--sh);border-radius:18px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transition:border-color .15s,background .15s,transform .15s}
+.lik button:hover,.opt:hover{border-color:var(--ink);transform:translateY(-1px)}
+.lik b{font-size:28px}.lik small{font-size:13px;color:var(--mut);text-align:center}
+.lik .sel,.opt.sel{background:var(--ink);color:var(--bg);border-color:var(--ink)}.lik .sel small{color:var(--bg)}
+.opts{display:grid;gap:10px}
+.opt{display:grid;grid-template-columns:36px minmax(0,1fr);gap:14px;align-items:start;text-align:start;padding:18px 20px;border:1px solid var(--line);background:var(--card);box-shadow:var(--sh);border-radius:18px;cursor:pointer;font-size:17px;min-height:60px;transition:border-color .15s,transform .15s}
+.opt i{font-style:normal;font-weight:700;width:32px;height:32px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;font-size:14px}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px}
+.hint{font-size:13px;color:var(--mut)}
+.lv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0 6px}
+.lv .card b{display:block;font-size:19px}
+/* resultados */
+.rh{padding:clamp(32px,5vw,64px) 0}
+.rhGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(20px,4vw,56px);align-items:center}
+.pname{font-size:clamp(40px,6vw,64px);font-weight:700;line-height:1;letter-spacing:-.02em;margin:6px 0 14px}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.duo .hd h3{font-size:19px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:clamp(28px,4vw,44px) 0}
+.kpi{border:1px solid var(--line);border-radius:18px;padding:20px;background:var(--card);box-shadow:var(--sh)}
+.kpi .v{font-size:30px;font-weight:700;line-height:1.1;margin:6px 0 4px}
+.gauge{width:100%;max-width:200px;display:block}
+.sec{padding:clamp(28px,4vw,48px) 0;border-top:1px solid var(--line)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,48px)}
+.quad{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.qc{border-radius:18px;padding:18px;background:var(--card);border:1px solid var(--line);box-shadow:var(--sh)}
+.qc .t{display:flex;justify-content:space-between;gap:8px;font-weight:700}.qc .t b{color:var(--c);font-size:18px}
+.dots{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 6px}.dots i{width:14px;height:14px;border-radius:50%;background:var(--c)}.dots i.e{background:transparent;border:2px dashed var(--c)}
+.bars{display:grid;gap:9px}
+.br{display:grid;grid-template-columns:9em minmax(0,1fr) 2.4em;gap:12px;align-items:center;font-size:15px;font-weight:700}
+.br .t{height:10px;background:var(--soft);border-radius:12px;overflow:hidden}.br .t i{display:block;height:100%;border-radius:12px;animation:bar 1s cubic-bezier(.2,.8,.2,1)}
+@keyframes bar{from{width:0!important}}
+.br .n{text-align:right;font-weight:400;font-variant-numeric:tabular-nums}
+.rev{display:grid;gap:8px}
+.rv{display:grid;grid-template-columns:28px minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-size:15px}
+.rv .ic{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;color:#fff}
+.rv small{display:block;color:var(--mut);font-size:13px}
+.qs p{font-size:17px}.ptitle{white-space:nowrap;font-size:clamp(30px,4.6vw,52px);margin-bottom:6px}.pperson{font-size:clamp(22px,2.6vw,30px);font-weight:700;line-height:1.2;margin:0 0 22px;color:var(--mut)}.ref.sfoot{max-width:860px;width:100%;margin:48px auto 0}.gt{width:100%;border-collapse:collapse;font-size:14.5px;min-width:860px}.gt th,.gt td{padding:11px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.gt th{font-size:13px;font-weight:700;white-space:nowrap}.gt .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}.gt td small{display:block;color:var(--mut);font-size:12.5px}.gt .mx{font-weight:700}.gt tfoot td{border-top:2px solid var(--ink);border-bottom:0;background:var(--card)}.gt tbody tr:hover td{background:var(--soft)}.gGrid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:start}.gGrid .wheel{max-width:none;width:112%;margin-left:-6%}.gp{fill:none;stroke:var(--ink);stroke-opacity:.28;stroke-width:1.2;fill-opacity:.12;transition:stroke-opacity .2s}.gp.on{stroke-opacity:1;stroke-width:3}.poly.avg{stroke-width:3.5;fill-opacity:.08}.gk{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-bottom:16px}.gk>div{display:grid;grid-template-columns:minmax(0,9.5em) minmax(0,1fr);gap:4px 14px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:12px 16px;background:var(--card)}.gk b{display:block;font-size:20px;line-height:1.2;overflow-wrap:anywhere}.gk span{font-size:13px;line-height:1.4;color:var(--mut)}.plist{display:grid;gap:6px;max-height:460px;overflow:auto;padding-right:4px}.pi{display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:12px;align-items:center;text-align:start;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);cursor:pointer;font:inherit;color:inherit}.pi:hover,.pi.on{border-color:var(--ink)}.pi .dot{width:10px;height:10px;border-radius:50%}.pi small{display:block;color:var(--mut);font-size:12.5px}.pt2{font-size:13px;font-weight:700;white-space:nowrap}@media(max-width:820px){.gGrid{grid-template-columns:minmax(0,1fr)}.gGrid .wheel{width:100%;margin-left:0}}aside .afoot{margin-top:auto}aside .nil{margin:0 0 -14px -14px}.topbar{display:flex;justify-content:flex-end;margin-top:calc(-1*clamp(20px,4vw,48px));margin-bottom:clamp(8px,2vw,20px)}.topbar .nil{margin:0 -14px 0 0}.stage{position:relative}.stagetop{position:absolute;top:clamp(14px,3vw,28px);right:clamp(14px,4vw,40px);background:#0a0a0c;border-radius:14px;padding:0 4px;line-height:0}.stagetop .nil{margin:-6px 0}@media(max-width:980px){.stagetop{position:static;align-self:flex-end;margin-bottom:16px}}.nil{display:block;height:auto;max-width:100%;mix-blend-mode:lighten;image-rendering:auto;margin:-18px 0 6px -14px}@media(max-width:980px){aside .afoot{order:-1;margin:0;flex:none}aside .nil{width:130px;margin:-12px -10px}aside .brand{display:none}}.ref{max-width:760px;font-size:13.5px;color:var(--mut);line-height:1.6;border-top:1px solid var(--line);padding-top:16px}.ref b{color:var(--ink);font-size:14px}.ref p{margin:6px 0 0}.revbar{max-width:860px;width:100%;margin:0 auto 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;padding:14px 14px 14px 20px;border:1px solid var(--line);border-radius:18px;background:var(--card);box-shadow:var(--sh);font-size:15px}.revbar .btn{min-height:44px;padding:10px 22px}.radarbox{position:relative}.tip{position:absolute;z-index:5;width:min(300px,92%);padding:16px 18px;border-radius:16px;background:rgba(20,22,28,.96);border:1px solid rgba(255,255,255,.12);color:#f1efea;box-shadow:0 18px 40px -12px rgba(0,0,0,.7);pointer-events:none;animation:in .18s ease}.tip .hd>span{color:#9b988f}.tip .tsc{font-size:14px;color:#b9b6ae;margin-bottom:8px}.tip .tsc b{font-size:22px;color:#f1efea}.pt{cursor:pointer}.pt .dot{transition:r .15s}.pt:hover .dot,.pt.on .dot{r:9}.pt:focus{outline:none}.pt:focus-visible .dot{stroke:#fff}.bc{display:grid;gap:12px}.bc .hd h3{font-size:20px}.chips{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 16px}.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;background:var(--card)}.chip b{font-size:15px}.bars8{max-width:820px;gap:14px}.nmb{display:grid;line-height:1.25}.nmb small{font-size:12.5px;font-weight:400;color:var(--mut);margin-top:2px}.bars8 .br{grid-template-columns:13em minmax(0,1fr) 2.4em 5.6em}.lt{font-size:12px;color:var(--mut);font-weight:400;margin-inline-start:4px;white-space:nowrap}.what{font-size:14px;color:var(--mut);margin:8px 0 14px;max-width:62ch}.what b{color:var(--ink)}.kpi .what{margin:10px 0 0}.br .tg{font-size:12px;font-weight:400;color:var(--mut);white-space:nowrap}.br{grid-template-columns:9em minmax(0,1fr) 2.4em 5.6em}.dm{display:grid;gap:6px;margin-top:16px;font-size:14px;color:var(--mut)}.dm b{color:var(--ink)}
+.toast{min-height:22px;font-size:14px;color:var(--mut)}
+.k2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:980px){.shell{grid-template-columns:minmax(0,1fr)}aside{position:sticky;height:auto;flex-direction:row;align-items:center;padding:14px max(5vw,18px);gap:16px;z-index:2}aside .mw,aside .who,aside .foot{display:none}aside .brand{flex:none;font-size:14px}aside .brand span{display:none}.steps{flex:1;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.st{font-size:12px}.st b{font-size:13px}.stage{min-height:auto}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){.heroGrid,.rhGrid,.two,.how.k2{grid-template-columns:minmax(0,1fr)}.grid8{grid-template-columns:repeat(2,minmax(0,1fr))}.how{grid-template-columns:minmax(0,1fr)}}
+.steps .st small{display:block}@media(max-width:980px){.st small{display:none}.st{margin:0;padding:6px 8px}}
+@media(max-width:600px){.nav{flex-wrap:wrap}.nav .hint{display:none}.revbar .btn{width:100%}.bars8 .br{grid-template-columns:9.5em minmax(0,1fr) 2.2em}.br{grid-template-columns:7.5em minmax(0,1fr) 2.2em}.br .tg,.br>span:nth-child(4):empty{display:none}.lik{grid-template-columns:minmax(0,1fr)}.lik button{flex-direction:row;justify-content:flex-start;min-height:56px;padding:0 18px;gap:14px}.lik b{font-size:20px}.grid8,.duo,.lv,.kpis,.kpis.k2{grid-template-columns:minmax(0,1fr)}.rv{grid-template-columns:28px minmax(0,1fr)}.rv>span:nth-child(n+3){grid-column:2}.steps .st span{display:none}aside .brand{display:none}.rhGrid>div:last-child{order:-1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+{
+const ST=[
+{k:'dom',n:'Dominante',p:[['Dominante','D']],c:'D',a:-135,q:'ori',br:'Mover al equipo a resultados con urgencia.',ri:'Se impone y el equipo deja de proponer.'},
+{k:'pio',n:'Pionero',p:[['Pio','D'],['nero','I']],c:'D + I',a:-90,q:'ori',br:'Explorar ideas, mercados y estrategias nuevas.',ri:'Impulsividad donde se necesita estabilidad.'},
+{k:'ene',n:'Energizante',p:[['Energizante','I']],c:'I',a:-45,q:'apo',br:'Dar impulso creativo y entusiasmo.',ri:'Poco seguimiento a los detalles.'},
+{k:'cap',n:'Capacitador',p:[['Capa','I'],['citador','S']],c:'I + S',a:0,q:'apo',br:'Desarrollar al equipo y formar otros líderes.',ri:'Le cuestan las decisiones rápidas y duras.'},
+{k:'afi',n:'Afiliativo',p:[['Afiliativo','S']],c:'S',a:45,q:'del',br:'Cuidar la cohesión y la confianza del equipo.',ri:'Evita las decisiones difíciles.'},
+{k:'par',n:'Participativo',p:[['Partici','S'],['pativo','C']],c:'S + C',a:90,q:'del',br:'Decidir con precisión y por consenso.',ri:'Lento cuando hay que decidir rápido.'},
+{k:'sis',n:'Sistemático',p:[['Sistemático','C']],c:'C',a:135,q:'dir',br:'Ordenar, analizar y cuidar los procesos.',ri:'Poca flexibilidad ante el cambio.'},
+{k:'res',n:'Resolutor',p:[['Reso','C'],['lutor','D']],c:'C + D',a:180,q:'dir',br:'Decidir con firmeza y altos estándares.',ri:'Rígido donde hay que experimentar.'}];
+const SN=Object.fromEntries(ST.map(s=>[s.k,s]));
+
+const IT=[
+['dom','Fija metas exigentes y empuja al equipo a lograrlas con urgencia.'],
+['afi','Cuida el clima y la relación del equipo antes de presionar por resultados.'],
+['sis','Documenta los procesos y pide que se sigan los procedimientos.'],
+['ene','Contagia entusiasmo cuando el equipo enfrenta un reto difícil.'],
+['res','Decide con firmeza y sostiene estándares altos de calidad.'],
+['cap','Dedica tiempo a enseñar para que otros aprendan a hacerlo solos.'],
+['pio','Propone ideas o formas de trabajar nuevas antes que los demás.'],
+['par','Antes de decidir, consulta al equipo y busca consenso.'],
+['dom','Cuando algo se atrasa, toma el control y da instrucciones directas.'],
+['ene','Usa historias y reconocimiento para movilizar a las personas.'],
+['sis','Revisa datos y detalles antes de aprobar algo.'],
+['afi','Redistribuye el trabajo para que nadie quede sobrecargado.'],
+['pio','Cuestiona cómo se hacen las cosas y busca una alternativa más sencilla.'],
+['res','Ante un problema, lo analiza y lo resuelve personalmente.'],
+['par','Arma los planes junto con el equipo, no solo para el equipo.'],
+['cap','Desglosa el trabajo paso a paso con quien se atasca.'],
+['dom','Prioriza el resultado aunque eso incomode a algunas personas.'],
+['sis','Se incomoda cuando se cambia un proceso que ya funciona.'],
+['ene','Prefiere generar ideas a revisar los detalles de la ejecución.'],
+['afi','Evita conversaciones que podrían generar conflicto en el equipo.'],
+['pio','Se lanza a probar algo nuevo aunque no tenga todos los datos.'],
+['cap','Busca que alguien de su equipo pueda reemplazarlo en temas clave.'],
+['res','Corrige rápido cualquier desviación del estándar.'],
+['par','Prefiere tomarse más tiempo para decidir bien y con acuerdo.']];
+const LAB=['Nunca','Pocas veces','A veces','Con frecuencia','Siempre'];
+const DS={
+dom:'Lidera desde los resultados. Fija metas ambiciosas, crea sentido de urgencia y toma el control cuando algo se atrasa. Es directo y decidido, y su equipo sabe con claridad qué se espera de él. Su reto es dejar espacio para que otros propongan y decidan.',
+pio:'Lidera desde la exploración. Busca oportunidades nuevas, cuestiona cómo se hacen las cosas y se anima a probar aunque no tenga todos los datos. Contagia audacia y mueve al equipo hacia el cambio. Su reto es cuidar la estabilidad y medir el impacto de sus decisiones en los demás.',
+ene:'Lidera desde el entusiasmo. Anima al equipo, celebra los avances y usa historias para movilizar a las personas. Genera muchas ideas y un buen clima para crear. Su reto es dar seguimiento a los detalles y cerrar lo que empieza.',
+cap:'Lidera desde el desarrollo de las personas. Enseña, acompaña y reconoce el esfuerzo para que otros crezcan y puedan reemplazarlo en temas clave. Construye equipos que aprenden. Su reto es tomar decisiones rápidas y difíciles cuando la situación lo pide.',
+afi:'Lidera desde la cohesión. Cuida el clima, la confianza y el bienestar del equipo, y reparte el trabajo para que nadie quede sobrecargado. Crea un entorno seguro donde las personas se sienten parte. Su reto es enfrentar a tiempo los conflictos y las decisiones difíciles.',
+par:'Lidera desde el consenso. Consulta al equipo, escucha y construye los planes junto con los demás. Toma decisiones precisas y bien acordadas, y mantiene la calma bajo presión. Su reto es acelerar cuando hay que decidir rápido.',
+sis:'Lidera desde el orden. Documenta procesos, analiza datos y revisa los detalles antes de decidir. Da estructura, previsibilidad y calidad al trabajo del equipo. Su reto es flexibilizarse cuando el contexto cambia o pide experimentar.',
+res:'Lidera desde los estándares. Decide con firmeza, corrige las desviaciones y hace que cada persona responda por sus compromisos. Asegura calidad y cumplimiento. Su reto es no volverse rígido donde hace falta probar y aprender.'};
+const DB={
+D:'Energía orientada a los resultados y la acción. Se nota en la rapidez para decidir, la franqueza y el gusto por los retos. En exceso, puede volverse impaciente o imponerse sobre los demás.',
+I:'Energía orientada a las personas y la persuasión. Se nota en el entusiasmo, la apertura y la capacidad de sumar a otros a una idea. En exceso, puede dispersarse o descuidar los detalles.',
+S:'Energía orientada a la colaboración y la constancia. Se nota en la paciencia, la escucha y el apoyo al equipo. En exceso, puede evitar el conflicto o resistirse al cambio.',
+C:'Energía orientada a la calidad y la precisión. Se nota en el análisis, el rigor y el respeto por los procesos y estándares. En exceso, puede volverse perfeccionista o lento ante el cambio.'};
+const DM={D:'foco en resultados, rapidez y decisión',I:'foco en las personas, el entusiasmo y la influencia',S:'foco en la estabilidad, la cohesión y el apoyo',C:'foco en la calidad, la precisión y los procesos'};
+const SCR=[{t:'intro'},...IT.map((x,j)=>({t:'item',j})),{t:'res'}];
+/* ====== CONEXIÓN CON GOOGLE SHEETS ======
+   Pega entre las comillas la URL de la aplicación web de Apps Script
+   (termina en /exec). Si la dejas vacía, la evaluación funciona igual,
+   pero no guarda resultados ni muestra la vista del grupo. */
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbx15HhDOQWXgSYzmr1PfYVxUm-lenUuTOTHYbWBuEs3hpMZgPqfEz7kUNOoGhCDSGCyew/exec';
+/* ========================================= */
+let ADV=0;
+let S={i:0,name:'',role:'',a:{},s:{},sel:'dom'};
+try{const r=localStorage.getItem('nil-estilo-liderazgo');if(r)S={...S,...JSON.parse(r)}}catch(e){}
+const uid=()=>{try{return crypto.randomUUID()}catch(e){return Date.now().toString(36)+Math.random().toString(36).slice(2)}};
+if(!S.id)S.id=uid();
+const save=()=>{try{localStorage.setItem('nil-estilo-liderazgo',JSON.stringify(S))}catch(e){}};
+const root=document.getElementById('root');
+const FOOT='<p style="margin:0">Esta evaluación está diseñada por <i>Next Idea Lab</i>, basado en el modelo de los 8 estilos de liderazgo de Sugerman, J., Scullard, M. y Wilhelm, E. (2011). Los comportamientos D, I, S y C provienen de Marston, W. M.</p>';
+const LOGO='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAACECAIAAABu/GXrAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFb2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI2LTA5LTIwPC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkRhdGE+eyZxdW90O2RvYyZxdW90OzomcXVvdDtEQUdhX1RBd013byZxdW90OywmcXVvdDt1c2VyJnF1b3Q7OiZxdW90O1VBRE12Z05HYlZvJnF1b3Q7LCZxdW90O2JyYW5kJnF1b3Q7OiZxdW90O0VxdWlwbyBkZSBCcmFuZG8gTWFjbyZxdW90O308L0F0dHJpYjpEYXRhPgogICAgIDxBdHRyaWI6RXh0SWQ+YTcxNjhmMDgtZTlkOC00ZWFmLWJmNjYtMzYwMGNlOTk5ZjA4PC9BdHRyaWI6RXh0SWQ+CiAgICAgPEF0dHJpYjpGYklkPjUyNTI2NTkxNDE3OTU4MDwvQXR0cmliOkZiSWQ+CiAgICAgPEF0dHJpYjpUb3VjaFR5cGU+MjwvQXR0cmliOlRvdWNoVHlwZT4KICAgIDwvcmRmOmxpPgogICA8L3JkZjpTZXE+CiAgPC9BdHRyaWI6QWRzPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpkYz0naHR0cDovL3B1cmwub3JnL2RjL2Vs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';
+const logo=(w)=>`<img class="nil" src="${LOGO}" width="${w}" height="${Math.round(w*132/320)}" alt="Next Idea Lab · Training & Consultancy">`;
+const esc=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const nm=s=>`<span style="color:var(--s-${s.k})">${s.n}</span>`;
+let WID=0;
+const tn=s=>`<tspan style="fill:var(--s-${s.k})">${s.n}</tspan>`;
+const fillOf=s=>`var(--s-${s.k})`;
+const P=(a,r)=>{const t=a*Math.PI/180;return[230+r*Math.cos(t),230+r*Math.sin(t)]};
+const nA=()=>Object.keys(S.a).length,nS=()=>Object.keys(S.s).length;
+function wheel(vals,act,mini){
+  const R=140,id='w'+(++WID);let d='',h='';
+  ST.forEach(s=>{d+=`<radialGradient id="${id}${s.k}" cx="230" cy="230" r="${R}" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:var(--s-${s.k});stop-opacity:0"/><stop offset="1" style="stop-color:var(--s-${s.k});stop-opacity:${mini?.75:act===s.k&&!vals?.6:.34}"/></radialGradient>`});
+  ST.forEach(s=>{const[x1,y1]=P(s.a-22.5,R),[x2,y2]=P(s.a+22.5,R);h+=`<path d="M230 230L${x1} ${y1}A${R} ${R} 0 0 1 ${x2} ${y2}Z" fill="url(#${id}${s.k})"/>`});
+  if(!mini)for(let k=1;k<=4;k++)h+=`<circle cx="230" cy="230" r="${R*k/5}" fill="none" stroke="var(--ink)" stroke-opacity=".08"/>`;
+  ST.forEach(s=>{const[x1,y1]=P(s.a-22.5,R),[x2,y2]=P(s.a+22.5,R);h+=`<line x1="230" y1="230" x2="${x1}" y2="${y1}" stroke="var(--ink)" stroke-opacity=".1"/>`;
+    const r2=R+(mini?9:8),[a1,b1]=P(s.a-20.5,r2),[a2,b2]=P(s.a+20.5,r2);h+=`<path d="M${a1} ${b1}A${r2} ${r2} 0 0 1 ${a2} ${b2}" fill="none" style="stroke:var(--s-${s.k})" stroke-width="${mini?12:act===s.k&&!vals?10:6}" stroke-linecap="round"/>`});
+  [[-135,'D'],[-45,'I'],[45,'S'],[135,'C']].forEach(([an,l])=>{const[lx,ly]=P(an,R*.56);h+=`<text x="${lx}" y="${ly+9}" text-anchor="middle" style="fill:var(--ink);fill-opacity:${vals?.25:.55};font-size:${mini?30:24}px;font-weight:700">${l}</text>`});
+  if(vals)h+=`<polygon class="poly" points="${ST.map(s=>P(s.a,R*vals[s.k]/5).join(',')).join(' ')}"/>`+ST.map(s=>{const[x,y]=P(s.a,R*vals[s.k]/5);return`<g class="pt" data-k="${s.k}" tabindex="0" role="button" aria-label="${s.n}: ${vals[s.k].toFixed(1)}"><circle cx="${x}" cy="${y}" r="18" fill="transparent"/><circle class="dot" cx="${x}" cy="${y}" r="6.5" style="fill:var(--s-${s.k})" stroke="var(--bg)" stroke-width="2.5"/></g>`}).join('');
+  if(!mini)ST.forEach(s=>{const[x,y]=P(s.a,R+34),c=Math.cos(s.a*Math.PI/180),an=c>.3?'start':c<-.3?'end':'middle';h+=`<text class="lab${act===s.k?' on':''}" data-k="${s.k}" x="${x}" y="${y+6}" text-anchor="${an}" tabindex="0" role="button" aria-label="${s.n}">${tn(s)}${vals?`<tspan style="fill:var(--mut);font-weight:400"> ${vals[s.k].toFixed(1)}</tspan>`:''}</text>`});
+  return`<svg class="wheel" viewBox="${mini?'76 76 308 308':'-90 -10 640 480'}" role="img" aria-label="Rueda de los 8 estilos sobre los comportamientos D, I, S y C"><defs>${d}</defs>${h}</svg>`}
+const card=(s,extra='')=>`<div class="hd"><h3>${nm(s)}</h3><span>${s.c}</span></div><p class="small" style="margin:0">${extra}<b>Brilla:</b> ${s.br}<br><b>Riesgo:</b> <span class="ri">${s.ri}</span></p>`;
+function score(){const v={};ST.forEach(s=>{const xs=IT.map((x,j)=>x[0]===s.k?S.a[j]:null).filter(x=>x!=null);v[s.k]=xs.length?xs.reduce((a,b)=>a+b,0)/xs.length:0});return v}
+
+function intro(){
+  const started=nA()>0;
+  return`<div class="hero dark"><div class="wrap topbar">${logo(240)}</div><div class="wrap heroGrid"><div>
+  <h1>Evaluación de Estilo de Liderazgo</h1>
+  <p class="lead">Esta autoevaluación sirve para que los líderes de las distintas organizaciones identifiquen el estilo de liderazgo que más los representa. Ningún estilo es bueno o malo: es apropiado o inapropiado según la tarea y la madurez de quien la recibe.</p>
+  <div id="f" style="margin-top:26px">
+   <label class="field"><span>Tu nombre</span><input id="nm" type="text" autocomplete="name" value="${esc(S.name)}" placeholder="Nombre y apellido"></label>
+   <label class="field"><span>Tu rol en la organización</span><input id="rl" type="text" autocomplete="organization-title" value="${esc(S.role)}" placeholder="Ej.: Director de TI"></label>
+   <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:20px"><button class="btn" type="button" id="start">${started?'Continuar donde quedé':'Comenzar la evaluación'}</button>${started?'<button class="link" type="button" id="reset">Empezar de nuevo</button>':''}</div>
+  </div></div>
+  <div>${wheel(null,S.sel)}<div id="inf"><div class="card">${card(SN[S.sel])}</div></div></div></div></div>
+  <div class="wrap"><div class="how k2">
+   <div><b>24 afirmaciones</b><span class="mut">Cómo lideras habitualmente, de 1 (nunca) a 5 (siempre). Unos 6 minutos.</span></div>
+   <div><b>Resultados</b><span class="mut">Tu estilo predominante con su comportamiento y tus 8 estilos en la rueda.</span></div></div>
+  <h2>Los 8 estilos sobre 4 comportamientos</h2><p class="mut">Cada estilo combina uno o dos comportamientos: D Dominancia, I Influencia, S Estabilidad y C Cumplimiento. Toca una tarjeta o la rueda para explorarlos.</p>
+  <div class="grid8">${['dom','pio','ene','cap','afi','par','sis','res'].map(k=>`<button class="card${k===S.sel?' on':''}" data-c="${k}" style="--sc:var(--s-${k})">${card(SN[k])}</button>`).join('')}</div><div class="ref" style="margin-bottom:clamp(40px,6vw,72px)">${FOOT}${SHEETS_URL?'<p style="margin:10px 0 0"><a href="#grupo" style="color:var(--ink)">Ver resultados del grupo</a></p>':''}</div></div>`}
+
+function aside(sc){
+  const ia=nA(),cur=sc.t==='item'?0:1;
+  const st=[['Evaluación','Tu forma de liderar',ia,IT.length,`${ia} de ${IT.length} respondidas`],['Resultados','Tu perfil',done()?1:0,1,done()?'Listos para ver':'Completa las 24 respuestas']];
+  return`<aside class="dark"><div class="brand">Evaluación de Estilo de Liderazgo</div>
+  <div class="mw">${wheel(null,null,true)}</div>
+  ${S.name||S.role?`<div class="who"><b>${esc(S.name)||'Director'}</b>${esc(S.role)}</div>`:''}
+  <nav class="steps" aria-label="Secciones">${st.map(([a,b,n,t,m],k)=>`<button class="st${k===cur?' on':''}" data-go="${k}" ${k===1&&!done()?'disabled':''} ${k===cur?'aria-current="step"':''}><div><b>${a}</b> <span>· ${b}</span></div><div class="tr"><i style="width:${n/t*100}%"></i></div><small>${m}</small></button>`).join('')}</nav>
+  <div class="afoot">${logo(220)}</div></aside>`}
+
+function item(j){const it=IT[j],v=S.a[j];return`<section class="scr"><div class="cnt"><b>Afirmación ${j+1} de ${IT.length}</b> · Tu forma habitual de liderar</div>
+  <p class="stmt">${it[1]}</p><p class="ask">¿Con qué frecuencia lo haces?</p>
+  <div class="lik">${LAB.map((l,k)=>`<button data-v="${k+1}" class="${v===k+1?'sel':''}"><b>${k+1}</b><small>${l}</small></button>`).join('')}</div>${nav(v!=null,'Teclas 1 a 5')}</section>`}
+const done=()=>nA()===IT.length;
+const nav=(ok,hint)=>`<div class="nav"><button class="btn ghost" id="back">Anterior</button><span class="hint">${hint}</span><span style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end"><button class="btn" id="next" ${ok?'':'disabled'}>Siguiente</button></span></div>`;
+
+function results(){
+  const v=score(),srt=[...ST].sort((a,b)=>v[b.k]-v[a.k]),top=srt[0],sec=srt[1],low=srt[7];
+  const dn={D:'Dominancia',I:'Influencia',S:'Estabilidad',C:'Cumplimiento'};
+  const lt=s=>s.p.map(x=>x[1]);
+  const beh=s=>lt(s).map(l=>`${dn[l]} (${l})`).join(' + ');
+  const chips=s=>lt(s).map(l=>`<span class="chip"><b>${l}</b>${dn[l]}</span>`).join('<span class="mut">+</span>');
+  const title='Perfil de liderazgo';
+  return`<div class="rh dark"><div class="wrap topbar">${logo(240)}</div><div class="wrap rhGrid"><div>
+   <p class="kicker">Resultados Individuales de la Autoevaluación</p><h1 class="ptitle">${title}</h1>${S.name?`<p class="pperson">${esc(S.name)}</p>`:''}
+   <span class="mut">Estilo predominante · ${v[top.k].toFixed(1)} de 5</span><div class="pname">${nm(top)}</div>
+   <div class="chips"><span class="mut small">Comportamiento</span>${chips(top)}</div>
+   <p><b>Brilla:</b> ${top.br}<br><b>Riesgo:</b> <span class="ri">${top.ri}</span></p>
+   <p class="what"><b>Qué significa:</b> es el estilo con el promedio más alto en tus 24 respuestas, la forma de liderar a la que recurres con más naturalidad. No es tu único estilo ni el mejor: es tu punto de partida.</p>
+   <div class="duo"><div class="card"><span class="small mut">Segundo estilo · ${v[sec.k].toFixed(1)}</span>${card(sec)}<p class="small" style="margin:10px 0 0"><b>Comportamiento:</b> ${beh(sec)}</p><p class="what"><b>Qué significa:</b> tu segundo recurso más frecuente. Suele acompañar al predominante y matizarlo.</p></div>
+   <div class="card"><span class="small mut">Menos usado · ${v[low.k].toFixed(1)}</span>${card(low)}<p class="small" style="margin:10px 0 0"><b>Comportamiento:</b> ${beh(low)}</p><p class="what"><b>Qué significa:</b> el estilo que menos aparece en tus respuestas. Es donde tienes menos práctica, no necesariamente una debilidad. Practicarlo amplía las situaciones en las que puedes liderar bien.</p></div></div>
+  </div><div class="radarbox" id="rbox">${wheel(v,top.k)}<div class="tip" id="tip" role="tooltip" hidden></div><p class="small mut" style="text-align:center;margin:6px auto 0">Toca o pasa el cursor sobre un punto para ver el resultado de ese estilo.</p></div></div></div>
+  <div class="wrap">
+   <div class="sec two" style="border-top:0"><div><h2>Cómo lidera un estilo ${nm(top)}</h2><p style="font-size:17px">${DS[top.k]}</p></div>
+    <div><h2>Su comportamiento</h2><p class="what">${top.n} ${lt(top).length>1?'combina dos comportamientos de la rueda':'se apoya en un solo comportamiento de la rueda'}: ${lt(top).map(l=>dn[l]).join(' y ')}.</p><div class="bc">${lt(top).map(l=>`<div class="card"><div class="hd"><h3>${dn[l]}</h3><span>${l}</span></div><p class="small" style="margin:0">${DB[l]}</p></div>`).join('')}</div></div></div>
+   <div class="sec"><h2>Tus 8 estilos</h2><p class="what"><b>Qué significa:</b> el promedio de tus 3 respuestas para cada estilo, de 1 (nunca) a 5 (siempre). Desde 4.0 es un estilo que usas con frecuencia; entre 2.5 y 3.9 lo usas a veces; por debajo de 2.5 lo usas poco. Debajo de cada estilo ves su comportamiento: la parte de la rueda a la que pertenece.</p>
+    <div class="bars bars8">${srt.map(s=>`<div class="br"><span class="nmb">${nm(s)}<small>${lt(s).map(l=>dn[l]).join(' + ')}</small></span><span class="t"><i style="width:${v[s.k]/5*100}%;background:${fillOf(s)}"></i></span><span class="n">${v[s.k].toFixed(1)}</span><span class="tg">${v[s.k]>=4?'Frecuente':v[s.k]>=2.5?'A veces':'Poco'}</span></div>`).join('')}</div></div>
+   <div class="sec"><div class="ref">${FOOT}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px"><button class="btn ghost" id="rev">Revisar respuestas</button><button class="btn ghost" id="again">Nueva evaluación</button>${SHEETS_URL?'<a class="btn ghost" href="#grupo" style="text-decoration:none;display:inline-flex;align-items:center">Ver resultados del grupo</a>':''}</div><p class="small mut" id="savest" aria-live="polite" style="margin-top:12px"></p></div>
+  </div>`}
+
+
+async function syncResult(){
+  const st=document.getElementById('savest');if(!st||!SHEETS_URL)return;
+  const v=score(),srt=[...ST].sort((a,b)=>v[b.k]-v[a.k]);
+  const data={id:S.id,nombre:S.name,rol:S.role,predominante:srt[0].n,segundo:srt[1].n,menos:srt[7].n,estilos:ST.map(s=>+v[s.k].toFixed(2)),respuestas:IT.map((x,j)=>S.a[j])};
+  const sig=JSON.stringify(data);
+  if(S.sent===sig){st.textContent='Tu resultado está guardado.';return}
+  st.textContent='Guardando tu resultado…';
+  try{const r=await fetch(SHEETS_URL+'?action=save&data='+encodeURIComponent(sig));const j=await r.json();if(!j.ok)throw new Error(j.error||'error');
+    S.sent=sig;save();st.textContent='Tu resultado está guardado.';G.rows=null}
+  catch(e){st.innerHTML='No se pudo guardar tu resultado. <button class="link" id="retry" style="color:var(--ink)">Reintentar</button>';const b=document.getElementById('retry');if(b)b.onclick=syncResult}}
+
+let G={rows:null,err:null,loading:false,hi:null,pin:null};
+async function loadGroup(){
+  if(!SHEETS_URL)return;G.loading=true;G.err=null;render();
+  try{const r=await fetch(SHEETS_URL+'?action=list');const j=await r.json();if(!j.ok)throw new Error(j.error||'error');
+    G.rows=(j.rows||[]).map(r=>({id:String(r.id),nombre:String(r.nombre||''),rol:String(r.rol||''),fecha:r.fecha,v:Object.fromEntries(ST.map(s=>[s.k,Math.min(5,Math.max(0,+r[s.n]||0))]))})).filter(r=>ST.every(s=>r.v[s.k]>=1));
+    G.at=new Date()}
+  catch(e){G.err='No se pudo leer el Google Sheets. Revisa la conexión o la URL de la aplicación web.'}
+  G.loading=false;if(location.hash==='#grupo')render()}
+function groupWheel(rows,avg,hi){
+  let svg=wheel(avg,null);
+  const R=140,lines=rows.map(r=>{const top=[...ST].sort((a,b)=>r.v[b.k]-r.v[a.k])[0];const on=hi===r.id;
+    return`<polygon class="gp${on?' on':''}" data-id="${esc(r.id)}" points="${ST.map(s=>P(s.a,R*r.v[s.k]/5).join(',')).join(' ')}"${on?` style="stroke:var(--s-${top.k});fill:var(--s-${top.k})"`:''}/>`}).join('');
+  return svg.replace('<polygon class="poly"',lines+'<polygon class="poly avg"')}
+function groupView(){
+  const head=`<div class="rh dark"><div class="wrap topbar">${logo(240)}</div><div class="wrap">`;
+  const back=`<a href="#" class="btn ghost" style="text-decoration:none;display:inline-flex;align-items:center">Volver a la evaluación</a>`;
+  if(!SHEETS_URL)return head+`<p class="kicker">Resultados del grupo</p><h1>Falta conectar Google Sheets</h1><p class="lead">Para ver el radar del grupo, pega la URL de la aplicación web de Apps Script en la variable SHEETS_URL del archivo.</p>${back}<div class="ref" style="margin-top:40px">${FOOT}</div></div></div>`;
+  if(G.rows===null&&!G.loading&&!G.err){setTimeout(loadGroup,0)}
+  const rows=G.rows||[],n=rows.length;
+  const avg=Object.fromEntries(ST.map(s=>[s.k,n?rows.reduce((a,r)=>a+r.v[s.k],0)/n:0]));
+  const srt=[...ST].sort((a,b)=>avg[b.k]-avg[a.k]);
+  const cnt=Object.fromEntries(ST.map(s=>[s.k,0]));rows.forEach(r=>{cnt[[...ST].sort((a,b)=>r.v[b.k]-r.v[a.k])[0].k]++});
+  const most=[...ST].sort((a,b)=>cnt[b.k]-cnt[a.k])[0],tie=ST.filter(s=>cnt[s.k]===cnt[most.k]).length>1;
+  const fmt=d=>{try{return new Date(d).toLocaleDateString('es-PE',{day:'2-digit',month:'short',year:'numeric'})}catch(e){return''}};
+  const status=G.loading?'Cargando respuestas…':G.err?G.err:G.at?`Actualizado a las ${G.at.toLocaleTimeString('es-PE',{hour:'2-digit',minute:'2-digit'})}`:'';
+  let body;
+  if(G.loading&&!G.rows)body=`<p class="lead">Cargando respuestas del Google Sheets…</p>`;
+  else if(G.err&&!G.rows)body=`<p class="lead">${G.err}</p>`;
+  else if(!n)body=`<p class="lead">Aún no hay respuestas guardadas. Cuando los líderes completen la evaluación, aparecerán aquí.</p>`;
+  else body=`<div class="gGrid"><div class="radarbox" id="gbox">${groupWheel(rows,avg,G.pin||G.hi)}<div class="tip" id="gtip" role="tooltip" hidden></div><p class="small mut" style="text-align:center;margin:4px auto 0">Línea gruesa: promedio del grupo. Líneas finas: cada participante. Pasa el cursor o toca un punto del promedio para ver su detalle; toca un nombre para resaltar a esa persona.</p></div>
+    <div><div class="gk"><div><b>${n}</b><span>${n===1?'participante':'participantes'}</span></div><div><b style="color:var(--s-${srt[0].k})">${srt[0].n}</b><span>Estilo con mayor promedio del grupo (${avg[srt[0].k].toFixed(1)} de 5)</span></div><div><b style="color:var(--s-${srt[7].k})">${srt[7].n}</b><span>Estilo con menor promedio del grupo (${avg[srt[7].k].toFixed(1)} de 5)</span></div></div>
+    <div class="plist">${rows.map(r=>{const top=[...ST].sort((a,b)=>r.v[b.k]-r.v[a.k])[0];return`<button class="pi${(G.pin===r.id)?' on':''}" data-id="${esc(r.id)}"><span class="dot" style="background:var(--s-${top.k})"></span><span><b>${esc(r.nombre)||'Sin nombre'}</b><small>${esc(r.rol)||'Sin rol'}${r.fecha?' · '+fmt(r.fecha):''}</small></span><span class="pt2" style="color:var(--s-${top.k})">${top.n}</span></button>`}).join('')}</div></div></div>`;
+  const topk=r=>[...ST].sort((a,b)=>r.v[b.k]-r.v[a.k])[0].k;
+  const table=n?`<div class="wrap"><div class="sec" style="border-top:0"><h2>Datos del promedio</h2><p class="what"><b>Qué significa:</b> los puntajes de cada participante en los 8 estilos, de 1 a 5. La última fila es el promedio del grupo, el mismo que dibuja la línea gruesa del radar. En cada fila se resalta el estilo predominante de esa persona.</p>
+    <div class="scroll"><table class="gt"><thead><tr><th>Participante</th>${ST.map(s=>`<th class="num" style="color:var(--s-${s.k})">${s.n}</th>`).join('')}</tr></thead><tbody>
+    ${rows.map(r=>{const t=topk(r);return`<tr><td><b>${esc(r.nombre)||'Sin nombre'}</b><small>${esc(r.rol)||'Sin rol'}</small></td>${ST.map(s=>`<td class="num${s.k===t?' mx':''}"${s.k===t?` style="color:var(--s-${s.k})"`:''}>${r.v[s.k].toFixed(1)}</td>`).join('')}</tr>`}).join('')}
+    </tbody><tfoot><tr><td><b>Promedio del grupo</b><small>${n} ${n===1?'participante':'participantes'}</small></td>${ST.map(s=>`<td class="num"><b>${avg[s.k].toFixed(1)}</b></td>`).join('')}</tr></tfoot></table></div></div></div>`:'';
+  const lower=n?`<div class="wrap"><div class="sec two"><div><h2>Promedio del grupo por estilo</h2><p class="what"><b>Qué significa:</b> el promedio de todos los participantes para cada estilo, de 1 (nunca) a 5 (siempre).</p><div class="bars bars8">${srt.map(s=>`<div class="br"><span class="nmb">${nm(s)}</span><span class="t"><i style="width:${avg[s.k]/5*100}%;background:${fillOf(s)}"></i></span><span class="n">${avg[s.k].toFixed(1)}</span><span class="tg">${avg[s.k]>=4?'Frecuente':avg[s.k]>=2.5?'A veces':'Poco'}</span></div>`).join('')}</div></div>
+    <div><h2>Estilos predominantes</h2><p class="what"><b>Qué significa:</b> cuántos participantes tienen cada estilo como predominante. Muestra la diversidad de estilos del grupo.</p><div class="bars bars8">${[...ST].sort((a,b)=>cnt[b.k]-cnt[a.k]).map(s=>`<div class="br"><span class="nmb">${nm(s)}</span><span class="t"><i style="width:${cnt[s.k]/n*100}%;background:${fillOf(s)}"></i></span><span class="n">${cnt[s.k]}</span><span class="tg">${Math.round(cnt[s.k]/n*100)}%</span></div>`).join('')}</div></div></div></div>`:'';
+  return head+`<p class="kicker">Resultados del grupo</p><h1>Radar del grupo</h1><div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0 0 22px"><button class="btn" id="gref">Actualizar</button>${back}<span class="small mut">${status}</span></div>${body}</div></div>${table}${lower}<div class="wrap"><div class="sec"><div class="ref">${FOOT}</div></div></div>`}
+function bindGroup(){
+  const r=document.getElementById('gref');if(r)r.onclick=()=>{G.rows=null;loadGroup()};
+  const box=document.getElementById('gbox');
+  const paint=id=>{const svg=box&&box.querySelector('svg');if(!svg)return;const rows=G.rows||[],n=rows.length;const avg=Object.fromEntries(ST.map(s=>[s.k,rows.reduce((a,x)=>a+x.v[s.k],0)/n]));
+    box.querySelector('svg').outerHTML=groupWheel(rows,avg,id);tips();root.querySelectorAll('.pi').forEach(b=>b.classList.toggle('on',b.dataset.id===G.pin))};
+  root.querySelectorAll('.pi').forEach(b=>{b.onmouseenter=()=>{if(!G.pin)paint(b.dataset.id)};b.onmouseleave=()=>{if(!G.pin)paint(null)};b.onclick=()=>{G.pin=G.pin===b.dataset.id?null:b.dataset.id;paint(G.pin)}});
+  tips()}
+let GTP=null;
+function tips(){
+  const box=document.getElementById('gbox'),tip=document.getElementById('gtip');if(!box||!tip)return;
+  const rows=G.rows||[],n=rows.length;if(!n)return;const dn={D:'Dominancia',I:'Influencia',S:'Estabilidad',C:'Cumplimiento'};
+  const show=(el,k)=>{const s=SN[k],vals=rows.map(r=>r.v[k]),x=vals.reduce((a,b)=>a+b,0)/n,mn=Math.min(...vals),mx=Math.max(...vals);
+    const pre=rows.filter(r=>[...ST].sort((a,b)=>r.v[b.k]-r.v[a.k])[0].k===k).length;
+    tip.innerHTML=`<div class="hd"><h3 style="font-size:19px;margin:0 0 4px">${nm(s)}</h3><span>${s.c}</span></div><div class="tsc"><b>${x.toFixed(1)}</b> de 5 · promedio del grupo · ${x>=4?'Frecuente':x>=2.5?'A veces':'Poco'}</div><p class="small" style="margin:0 0 6px"><b>Rango:</b> de ${mn.toFixed(1)} a ${mx.toFixed(1)} entre los ${n} participantes</p><p class="small" style="margin:0 0 6px"><b>Estilo predominante de:</b> ${pre} de ${n} ${n===1?'participante':'participantes'}</p><p class="small" style="margin:0"><b>Comportamiento:</b> ${s.p.map(p=>dn[p[1]]).join(' + ')}</p>`;
+    tip.hidden=false;const r=el.getBoundingClientRect(),b=box.getBoundingClientRect(),tw=tip.offsetWidth,th=tip.offsetHeight,cx=r.left+r.width/2-b.left;
+    let left=Math.max(4,Math.min(b.width-tw-4,cx-tw/2)),top=r.top-b.top-th-10;if(top<0)top=r.bottom-b.top+10;tip.style.left=left+'px';tip.style.top=top+'px';
+    box.querySelectorAll('.pt').forEach(p=>p.classList.toggle('on',p.dataset.k===k))};
+  const hide=()=>{if(GTP)return;tip.hidden=true;box.querySelectorAll('.pt').forEach(p=>p.classList.remove('on'))};
+  box.querySelectorAll('.pt,.lab').forEach(el=>{const k=el.dataset.k;el.addEventListener('mouseenter',()=>show(el,k));el.addEventListener('mouseleave',hide);el.addEventListener('focus',()=>show(el,k));el.addEventListener('blur',()=>{GTP=null;hide()});
+    el.addEventListener('click',e=>{e.stopPropagation();GTP=GTP===k?null:k;if(GTP)show(el,k);else{tip.hidden=true;box.querySelectorAll('.pt').forEach(p=>p.classList.remove('on'))}})})}
+document.addEventListener('click',()=>{if(GTP){GTP=null;const t=document.getElementById('gtip');if(t)t.hidden=true}});
+window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0)});
+function render(){
+  if(location.hash==='#grupo'){root.innerHTML=groupView();bindGroup();return}
+  if(SCR[S.i].t==='res'&&!done())S.i=1+IT.findIndex((x,j)=>S.a[j]==null);
+  const sc=SCR[S.i];
+  if(sc.t==='intro')root.innerHTML=intro();
+  else if(sc.t==='res')root.innerHTML=results();
+  else root.innerHTML=`<div class="shell">${aside(sc)}<main class="stage">${!done()&&IT.some((x,j)=>j<sc.j&&S.a[j]==null)?`<div class="revbar"><span><b>Te falta responder ${IT.length-nA()===1?'1 afirmación':(IT.length-nA())+' afirmaciones'}.</b> Complétala${IT.length-nA()===1?'':'s'} para ver tus resultados.</span><button class="btn" id="tomiss">Ir a la que falta</button></div>`:''}${done()?'<div class="revbar"><span><b>Estás revisando tus respuestas.</b> Puedes cambiar cualquiera y volver cuando quieras.</span><button class="btn" id="tores2">Ver mis resultados</button></div>':''}${item(sc.j)}<div class="ref sfoot">${FOOT}</div></main></div>`;
+  bind(sc)}
+function go(d){clearTimeout(ADV);let i=Math.max(0,Math.min(SCR.length-1,S.i+d));if(SCR[i].t==='res'&&!done()){const m=IT.findIndex((x,j)=>S.a[j]==null);i=1+m}S.i=i;save();render();window.scrollTo(0,0)}
+function resume(){const a=IT.findIndex((x,j)=>S.a[j]==null);return a>=0?1+a:SCR.length-1}
+function bind(sc){
+  const $=id=>document.getElementById(id);
+  $('next')&&($('next').onclick=()=>go(1));$('back')&&($('back').onclick=()=>go(-1));
+  const toRes=()=>{S.i=SCR.length-1;save();render();window.scrollTo(0,0)};$('tores')&&($('tores').onclick=toRes);$('tores2')&&($('tores2').onclick=toRes);$('tomiss')&&($('tomiss').onclick=()=>{clearTimeout(ADV);S.i=1+IT.findIndex((x,j)=>S.a[j]==null);save();render();window.scrollTo(0,0)});
+  root.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{const k=+b.dataset.go;if(k===1)return toRes();const a=IT.findIndex((x,j)=>S.a[j]==null);S.i=1+(a>=0?a:0);save();render();window.scrollTo(0,0)});
+  if(sc.t==='intro'){
+    $('nm').oninput=e=>{S.name=e.target.value;save()};$('rl').oninput=e=>{S.role=e.target.value;save()};
+    const start=()=>{S.i=resume();save();render();window.scrollTo(0,0)};$('start').onclick=start;
+    ['nm','rl'].forEach(id=>$(id).addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();start()}}));
+    $('reset')&&($('reset').onclick=()=>{S={...S,i:0,a:{},s:{}};save();render()});
+    const pick=k=>{S.sel=k;root.querySelectorAll('.lab').forEach(x=>x.classList.toggle('on',x.dataset.k===k));root.querySelectorAll('[data-c]').forEach(x=>x.classList.toggle('on',x.dataset.c===k));$('inf').innerHTML=`<div class="card">${card(SN[k])}</div>`;save()};
+    root.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>pick(b.dataset.c));
+    root.querySelectorAll('.lab').forEach(t=>{t.onclick=()=>pick(t.dataset.k);t.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(t.dataset.k)}}})}
+  if(sc.t==='item')root.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{const was=done();S.a[sc.j]=+b.dataset.v;save();const fin=!was&&done();root.querySelectorAll('[data-v]').forEach(x=>x.classList.toggle('sel',x===b));
+    const from=S.i;clearTimeout(ADV);ADV=setTimeout(()=>{if(S.i!==from)return;const miss=IT.findIndex((x,j)=>S.a[j]==null);
+      if(fin||sc.j===IT.length-1||from+1>=SCR.length-1){S.i=miss>=0?1+miss:SCR.length-1}else S.i=from+1;save();render();window.scrollTo(0,0)},230)});
+  if(sc.t==='res'){
+    const v=score(),box=$('rbox'),tip=$('tip'),dn={D:'Dominancia',I:'Influencia',S:'Estabilidad',C:'Cumplimiento'};let pinned=null;
+    const show=(el,k)=>{const s=SN[k],x=v[k],r=el.getBoundingClientRect(),b=box.getBoundingClientRect();
+      tip.innerHTML=`<div class="hd"><h3 style="font-size:19px;margin:0 0 4px">${nm(s)}</h3><span>${s.c}</span></div><div class="tsc"><b>${x.toFixed(1)}</b> de 5 · ${x>=4?'Frecuente':x>=2.5?'A veces':'Poco'}</div><p class="small" style="margin:0 0 8px"><b>Comportamiento:</b> ${s.p.map(p=>dn[p[1]]).join(' + ')}</p><p class="small" style="margin:0"><b>Brilla:</b> ${s.br}<br><b>Riesgo:</b> <span class="ri">${s.ri}</span></p>`;
+      tip.hidden=false;const cx=r.left+r.width/2-b.left,cy=r.top-b.top,tw=tip.offsetWidth,th=tip.offsetHeight;
+      let left=Math.max(4,Math.min(b.width-tw-4,cx-tw/2)),top=cy-th-10;if(top<0)top=r.bottom-b.top+10;tip.style.left=left+'px';tip.style.top=top+'px';
+      box.querySelectorAll('.pt').forEach(p=>p.classList.toggle('on',p.dataset.k===k))};
+    const hide=()=>{if(pinned)return;tip.hidden=true;box.querySelectorAll('.pt').forEach(p=>p.classList.remove('on'))};
+    box.querySelectorAll('.pt,.lab').forEach(el=>{const k=el.dataset.k;el.addEventListener('mouseenter',()=>show(el,k));el.addEventListener('mouseleave',hide);el.addEventListener('focus',()=>show(el,k));el.addEventListener('blur',()=>{pinned=null;hide()});
+      el.addEventListener('click',e=>{e.stopPropagation();pinned=pinned===k?null:k;if(pinned)show(el,k);else{tip.hidden=true;box.querySelectorAll('.pt').forEach(p=>p.classList.remove('on'))}})});
+    document.addEventListener('click',()=>{if(pinned){pinned=null;tip.hidden=true;box.querySelectorAll('.pt').forEach(p=>p.classList.remove('on'))}});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){pinned=null;tip.hidden=true}});
+    $('rev').onclick=()=>{S.i=1;save();render();window.scrollTo(0,0)};syncResult();
+    $('again').onclick=()=>{S={i:0,name:'',role:'',a:{},s:{},sel:'dom',id:uid()};save();render();window.scrollTo(0,0)}}}
+document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;const sc=SCR[S.i];const k=e.key.toUpperCase();
+  if(sc.t==='item'&&/^[1-5]$/.test(k))root.querySelector(`[data-v="${k}"]`)?.click();
+  else if(e.key==='ArrowRight'){const n=document.getElementById('next');if(n&&!n.disabled)go(1)}
+  else if(e.key==='ArrowLeft'&&sc.t!=='intro'&&sc.t!=='res')go(-1)});
+render()
+}
+</script>
+</body>
+</html>
